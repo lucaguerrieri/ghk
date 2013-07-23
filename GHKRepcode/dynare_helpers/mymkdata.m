@@ -1,4 +1,4 @@
-function history = mymkdata(dr_,ys_,nperiods,shock,addss,std_mat)
+function history = mymkdata(dr_,ys_,nperiods,addss,std_mat)
 
 %  dr_ structure returned by dynare (AR form for the model)
 %  lgy_ vector of variable names, returned by dynare
@@ -17,13 +17,13 @@ nshocks = size(dr_.ghu,2);
 %statevar_pos = (dr_.nstatic +1):(nvars-dr_.nfwrd);
 statevar_pos = (dr_.nstatic +1):(dr_.nstatic+size(dr_.ghx,2));
 
-if (max(size(shock)) > nshocks) | (max(size(shock))<1) 
-    error('erroneous shock vector as argument')
-end
-
-if ( size(shock,1)<size(shock,2) )
-    shock = shock';
-end
+% if (max(size(shock)) > nshocks) | (max(size(shock))<1) 
+%     error('erroneous shock vector as argument')
+% end
+% 
+% if ( size(shock,1)<size(shock,2) )
+%     shock = shock';
+% end
 
 history = zeros(nvars,nperiods+1);
 

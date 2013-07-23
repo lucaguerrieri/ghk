@@ -11,7 +11,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Get IRFS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-history=mymkdata(dr_,ys_,nperiods,shock,0,std_mat);  % returns matrix containing IRFs for all variables
+history=mymkdata(dr_,ys_,nperiods,0,std_mat);  % returns matrix containing IRFs for all variables
 
 reordered = lgy_(dr_.order_var,:);         % the vector reordered contains names of variables
                                            % corresponding to rows of
