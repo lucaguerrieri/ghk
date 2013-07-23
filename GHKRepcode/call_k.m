@@ -86,3 +86,18 @@ legendlist = char('MEI shock in a one-sector model (aggregate equivalence)',...
 figtitle = [''];
 plotirf3linesprices
 
+
+std_mat = diag([   0
+                   0
+   0.023494373177152
+                   0
+                   0
+                   0
+                   0
+                   0]);
+
+nperiods = 1000;               
+               
+makedata
+
+corrcoef(hpfast(f3_c_data,1600),hpfast(f3_j_cp_data,1600))
